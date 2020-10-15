@@ -38,3 +38,9 @@ author: Algo Wolfes Team Member
 location: Jordan
 ---
 ```
+<br>
+<hr>
+
+# Domain model:
+
+![cap](assets/Trusty-Hotels.png)
