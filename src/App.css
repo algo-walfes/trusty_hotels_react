@@ -517,12 +517,31 @@ h6 {
 @media screen and (min-width: 992px) {
   .filter-form {
     width: 95vw;
-    max-width: 1170px;
+    max-width: 1412px;
+    margin-left: 6.5%;
   }
 }
 /* end of rooms fitler*/
 
 /* start the footer */
 
+.footer{
+  display: flex;
+  background-color: #ececec;
+}
+
+.footer-logo{
+  width: 10%;
+  
+}
 
 /* end of the footer */
+
+/* addetional */
+
+.single-room-title{
+  margin: 5% 0 0 0;
+  
+}
+
+/* end addetional */

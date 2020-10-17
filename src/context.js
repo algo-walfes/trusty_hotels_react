@@ -11,6 +11,7 @@ class RoomProvider extends Component {
         featuredRooms: [],
         loading: true,
         type: "all",
+        hotelName: "all",
         capacity: 1,
         price: 0,
         minPrice: 0,
@@ -50,6 +51,7 @@ class RoomProvider extends Component {
           let room = { ...item.fields, images, id };
           return room;
         });
+        console.log(tempItems)
         return tempItems;
       }
 
@@ -82,7 +84,8 @@ class RoomProvider extends Component {
           minSize,
           maxSize,
           breakfast,
-          pets
+          pets,
+          hotelName
         } = this.state;
         // all the rooms
         let tempRooms = [...rooms];
@@ -93,6 +96,10 @@ class RoomProvider extends Component {
         // filter by type
         if (type !== "all") {
           tempRooms = tempRooms.filter(room => room.type === type);
+        }
+
+        if (hotelName !== "all") {
+          tempRooms = tempRooms.filter(room => room.hotelName === hotelName);
         }
     
         // filter by capacity

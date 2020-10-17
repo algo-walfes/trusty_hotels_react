@@ -5,6 +5,8 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import StyledHero from "../components/StyledHero";
+import Title from "../components/Title";
+
 export default class SingleRoom extends Component {
   constructor(props) {
     super(props);
@@ -40,8 +42,10 @@ export default class SingleRoom extends Component {
       extras,
       breakfast,
       pets,
-      images
+      images,
+      hotelName
     } = room;
+
     const [mainImg, ...defaultImg] = images;
 
     return (
@@ -53,6 +57,9 @@ export default class SingleRoom extends Component {
             </Link>
           </Banner>
         </StyledHero>
+        <h4 className="single-room-title" >
+        <Title title={hotelName} />
+        </h4>
         <section className="single-room">
           <div className="single-room-images">
             {defaultImg.map((item, index) => {

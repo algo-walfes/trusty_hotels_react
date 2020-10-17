@@ -21,6 +21,7 @@ export default [
       id: "1"
     },
     fields: {
+      hotelName: "radeson blue",
       name: "single economy",
       slug: "single-economy",
       type: "single",
@@ -78,6 +79,7 @@ export default [
       id: "2"
     },
     fields: {
+      hotelName: "radeson blue",
       name: "single basic",
       slug: "single-basic",
       type: "single",
@@ -135,6 +137,7 @@ export default [
       id: "3"
     },
     fields: {
+      hotelName: "radeson blue",
       name: "single standard",
       slug: "single-standard",
       type: "single",
@@ -192,6 +195,7 @@ export default [
       id: "4"
     },
     fields: {
+      hotelName: "movenpick",
       name: "single deluxe",
       slug: "single-deluxe",
       type: "single",
@@ -249,6 +253,7 @@ export default [
       id: "5"
     },
     fields: {
+      hotelName: "movenpick",
       name: "double economy",
       slug: "double-economy",
       type: "double",
@@ -306,6 +311,7 @@ export default [
       id: "6"
     },
     fields: {
+      hotelName: "movenpick",
       name: "double basic",
       slug: "double-basic",
       type: "double",
@@ -363,6 +369,7 @@ export default [
       id: "7"
     },
     fields: {
+      hotelName: "marina blaza",
       name: "double standard",
       slug: "double-standard",
       type: "double",
@@ -420,6 +427,7 @@ export default [
       id: "8"
     },
     fields: {
+      hotelName: "marina blaza",
       name: "double deluxe",
       slug: "double-deluxe",
       type: "double",
@@ -477,6 +485,7 @@ export default [
       id: "9"
     },
     fields: {
+      hotelName: "marina blaza",
       name: "family economy",
       slug: "family-economy",
       type: "family",
@@ -534,6 +543,7 @@ export default [
       id: "10"
     },
     fields: {
+      hotelName: "regencey",
       name: "family basic",
       slug: "family-basic",
       type: "family",
@@ -591,6 +601,7 @@ export default [
       id: "11"
     },
     fields: {
+      hotelName: "regencey",
       name: "family standard",
       slug: "family-standard",
       type: "family",
@@ -648,6 +659,7 @@ export default [
       id: "12"
     },
     fields: {
+      hotelName: "regencey",
       name: "family deluxe",
       slug: "family-deluxe",
       type: "family",
@@ -705,6 +717,7 @@ export default [
       id: "13"
     },
     fields: {
+      hotelName: "marina blaza",
       name: "presidential",
       slug: "presidential-room",
       type: "presidential",

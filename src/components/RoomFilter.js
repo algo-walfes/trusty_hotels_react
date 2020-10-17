@@ -8,7 +8,7 @@ const getUnique = (items, value) => {
 };
 export default function RoomFilter({ rooms }) {
   const context = useContext(RoomContext);
-  console.log(context)
+  // console.log(context)
   const {
     handleChange,
     type,
@@ -19,13 +19,17 @@ export default function RoomFilter({ rooms }) {
     minSize,
     maxSize,
     breakfast,
-    pets
+    pets,
+    hotelName
   } = context;
-  console.log(type);
+  // console.log(type);
   // get unique types
   let types = getUnique(rooms, "type");
+  let names = getUnique(rooms, "hotelName");
+  // console.log(names);
   // add all
   types = ["all", ...types];
+  names = ["all", ...names];
 
   // map to jsx
   types = types.map((item, index) => {
@@ -35,6 +39,16 @@ export default function RoomFilter({ rooms }) {
       </option>
     );
   });
+
+  names = names.map((item, index) => {
+    return (
+      <option value={item} key={index}>
+        {item}
+      </option>
+    );
+  });
+
+
   let people = getUnique(rooms, "capacity");
   people = people.map((item, index) => {
     return (
@@ -46,7 +60,27 @@ export default function RoomFilter({ rooms }) {
   return (
     <section className="filter-container">
       <Title title="search rooms" />
+
+
+
       <form className="filter-form">
+        {/*select hotel name  */}
+
+        <div className="form-group">
+          <label htmlFor="hotelName">hotel name</label>
+          <select
+            name="hotelName"
+            id="hotelName"
+            value={hotelName}
+            className="form-control"
+            onChange={handleChange}
+          >
+            {names}
+          </select>
+        </div>
+
+        {/*end select hotel name  */}
+        
         {/*select type  */}
         <div className="form-group">
           <label htmlFor="type">room type</label>
