@@ -46,7 +46,7 @@ class RoomProvider extends Component {
     formatData(items) {
         let tempItems = items.map(item => {
           let id = item.id;
-          let hotelName = item.hotelName;
+          let hotelName = item.hotel_name;
           let name = item.name;
           let slug = item.slug;
           let type = item.type;
@@ -61,7 +61,7 @@ class RoomProvider extends Component {
           let published_at = item.published_at.split("T")[0];
           
           
-          let images = item.tracks.map(image => image.images);
+          let images = [item.main_image,item.image1,item.image2,item.image3];
     
           let room = {published_at,hotelName,name,slug,type,price,size,capacity,pets,breakfast,featured,description,extras, images, id };
           return room;
