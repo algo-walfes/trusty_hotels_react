@@ -43,7 +43,8 @@ export default class SingleRoom extends Component {
       breakfast,
       pets,
       images,
-      hotelName
+      hotelName,
+      published_at,
     } = room;
 
     const [mainImg, ...defaultImg] = images;
@@ -73,6 +74,8 @@ export default class SingleRoom extends Component {
             </article>
             <article className="info">
               <h3>info</h3>
+              <h6>hotel name : {hotelName}</h6>
+              <h6>published at : {published_at}</h6>
               <h6>price : ${price}</h6>
               <h6>size : {size} m<sup>2</sup></h6>
               <h6>
