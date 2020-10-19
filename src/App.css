@@ -329,7 +329,7 @@ h6 {
 }
 .img-container img {
   width: 100%;
-  height: 185px;
+  height: 190px;
   display: block;
   transition: var(--mainTransition);
 }
@@ -605,4 +605,72 @@ h6 {
     height: 30%;
     margin-top: 1%;
   }
+}
+
+/* about start */
+
+.aboutlist-center{
+  margin-top: 8%;
+  margin-bottom: 10%;
+
+  /* padding-right: 10%; */
+}
+
+.about-icons{
+  display: flex;
+}
+
+.btn-primary-about{
+  display: inline-block;
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: var(--offWhite);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 55px;
+
+
+}
+
+.room-link-1{
+
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+
+.img-container:hover .room-link-1 {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.about-icon-position-1{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+.about-icon-position-2{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.about-icon-position-3{
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
+
+.about-icon-position-4{
+  position: absolute;
+  top: 50%;
+  left: 80%;
+
+}
+
+.about-title{
+  margin-top: 5%;
+}
+
+.about-img{
+  height: 330px !important;
 }
