@@ -329,6 +329,7 @@ h6 {
 }
 .img-container img {
   width: 100%;
+  height: 185px;
   display: block;
   transition: var(--mainTransition);
 }
@@ -393,6 +394,7 @@ h6 {
 }
 .single-room-images img {
   width: 100%;
+  height: 220px;
   display: block;
 }
 .single-room-info {
