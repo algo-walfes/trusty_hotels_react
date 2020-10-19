@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import items from "./data";
 
 
 
@@ -23,8 +22,11 @@ class RoomProvider extends Component {
     };
 
     componentDidMount() {
+      fetch("http://46.101.153.50:8000/api/hotels/")
+      .then(res => res.json())
+      .then(items =>{
         let rooms = this.formatData(items);
-        // console.log(items)
+        console.log(items)
         let featuredRooms = rooms.filter(room => room.featured === true);
         let maxPrice = Math.max(...rooms.map(item => item.price));
         let maxSize = Math.max(...rooms.map(item => item.size));
@@ -39,9 +41,12 @@ class RoomProvider extends Component {
             maxSize: maxSize
 
         });
+      })
+  
+  }
         
          
-     }
+     
 
     formatData(items) {
         let tempItems = items.map(item => {
@@ -57,7 +62,7 @@ class RoomProvider extends Component {
           let breakfast = item.breakfast;
           let featured = item.featured;
           let description = item.description;
-          let extras = item.extras;
+          let extras = item.extras.split(",,");
           let published_at = item.published_at.split("T")[0];
           
           
