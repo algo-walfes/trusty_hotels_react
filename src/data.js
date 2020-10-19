@@ -31,15 +31,8 @@ export default [
     published_at: "2020-10-17T06:00:07.967365Z",
     description:
       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-    extras: [
-      "Plush pillows and breathable bed linens",
-      "Soft, oversized bath towels",
-      "Full-sized, pH-balanced toiletries",
-      "Complimentary refreshments",
-      "Adequate safety/security",
-      "Internet",
-      "Comfortable beds"
-    ],
+    extras: "Plush pillows and breathable bed linens,,Soft,, oversized bath towels,,Full-sized,, pH-balanced toiletries,,Complimentary refreshments,,Adequate safety/security,,Internet,,Comfortable beds",
+    
     main_image: img1,
     image1: room2,
     image2: room3,
@@ -75,15 +68,8 @@ export default [
     published_at: "2020-10-17T06:00:07.967365Z",
     description:
       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-    extras: [
-      "Plush pillows and breathable bed linens",
-      "Soft, oversized bath towels",
-      "Full-sized, pH-balanced toiletries",
-      "Complimentary refreshments",
-      "Adequate safety/security",
-      "Internet",
-      "Comfortable beds"
-    ],
+    extras: "Plush pillows and breathable bed linens,,Soft, oversized bath towels,,Full-sized, pH-balanced toiletries,,Complimentary refreshments,,Adequate safety/security,,Internet,,Comfortable beds",
+
     main_image: img1,
     image1: room2,
     image2: room3,
@@ -105,15 +91,8 @@ export default [
     published_at: "2020-10-17T06:00:07.967365Z",
     description:
       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-    extras: [
-      "Plush pillows and breathable bed linens",
-      "Soft, oversized bath towels",
-      "Full-sized, pH-balanced toiletries",
-      "Complimentary refreshments",
-      "Adequate safety/security",
-      "Internet",
-      "Comfortable beds"
-    ],
+    extras: "Plush pillows and breathable bed linens,,Soft, oversized bath towels,,Full-sized, pH-balanced toiletries,,Complimentary refreshments,,Adequate safety/security,,Internet,,Comfortable beds",
+
     main_image: img1,
     image1: room2,
     image2: room3,
@@ -135,15 +114,8 @@ export default [
     published_at: "2020-10-17T06:00:07.967365Z",
     description:
       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-    extras: [
-      "Plush pillows and breathable bed linens",
-      "Soft, oversized bath towels",
-      "Full-sized, pH-balanced toiletries",
-      "Complimentary refreshments",
-      "Adequate safety/security",
-      "Internet",
-      "Comfortable beds"
-    ],
+    extras: "Plush pillows and breathable bed linens,,Soft, oversized bath towels,,Full-sized, pH-balanced toiletries,,Complimentary refreshments,,Adequate safety/security,,Internet,,Comfortable beds",
+
     main_image: img1,
     image1: room2,
     image2: room3,
@@ -165,15 +137,8 @@ export default [
     published_at: "2020-10-17T06:00:07.967365Z",
     description:
       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-    extras: [
-      "Plush pillows and breathable bed linens",
-      "Soft, oversized bath towels",
-      "Full-sized, pH-balanced toiletries",
-      "Complimentary refreshments",
-      "Adequate safety/security",
-      "Internet",
-      "Comfortable beds"
-    ],
+    extras: "Plush pillows and breathable bed linens,,Soft, oversized bath towels,,Full-sized, pH-balanced toiletries,,Complimentary refreshments,,Adequate safety/security,,Internet,,Comfortable beds",
+
     main_image: img1,
     image1: room2,
     image2: room3,
