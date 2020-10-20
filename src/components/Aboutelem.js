@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import { FaGithub,FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { SiFacebook } from "react-icons/si";
@@ -10,18 +9,18 @@ const Aboutelem = (props) => {
         <div className="img-container">
           <img src={props.img} alt={props.name} className="about-img" />
 
-          <Link to={props.github} className="btn-primary-about room-link-1 about-icon-position-1">
+          <a href={props.github} className="btn-primary-about room-link-1 about-icon-position-1" target="_blank" rel="noopener noreferrer">
             <FaGithub/>
-          </Link>
-          <Link to={props.email} className="btn-primary-about room-link-1 about-icon-position-2">
+          </a>
+          <a href={props.email} className="btn-primary-about room-link-1 about-icon-position-2" target="_blank" rel="noopener noreferrer">
             <MdMail/>
-          </Link> 
-          <Link to={props.linkedin} className="btn-primary-about room-link-1 about-icon-position-3">
+          </a> 
+          <a href={props.linkedin} className="btn-primary-about room-link-1 about-icon-position-3" target="_blank" rel="noopener noreferrer">
             <FaLinkedin/>
-          </Link>
-          <Link to={props.facebook} className="btn-primary-about room-link-1 about-icon-position-4">
+          </a>
+          <a href={props.facebook} className="btn-primary-about room-link-1 about-icon-position-4" target="_blank" rel="noopener noreferrer">
             <SiFacebook/>
-          </Link>              
+          </a>              
         </div>
 
         <p className="room-info">{props.name}</p>
