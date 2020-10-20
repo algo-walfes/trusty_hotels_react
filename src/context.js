@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import axios from "axios"
+// import axios from "axios"
 
 
 const RoomContext = React.createContext();
 
-const api = axios.create({
-  baseURL: `http://46.101.153.50:8000/api/hotels/`
-})
+// const api = axios.create({
+//   baseURL: `http://46.101.153.50:8000/api/hotels/`
+// })
 
 class RoomProvider extends Component {
     state = {
@@ -26,25 +26,32 @@ class RoomProvider extends Component {
         pets: false
     };
 
+    async getServerSideProps(){
+      // Call api here
+      // Add data to props
+      const res = await fetch('http://46.101.153.50:8000/api/hotels/');
+      const dataObj = await res.json();
+      let rooms = this.formatData(dataObj);
+      // console.log(items)
+      let featuredRooms = rooms.filter(room => room.featured === true);
+      let maxPrice = Math.max(...rooms.map(item => item.price));
+      let maxSize = Math.max(...rooms.map(item => item.size));
+
+      this.setState({
+          rooms: rooms,
+          featuredRooms: featuredRooms,
+          sortedRooms: rooms,
+          loading: false,
+          price: maxPrice,
+          maxPrice: maxPrice,
+          maxSize: maxSize
+
+      });
+      
+  }
+
     componentDidMount() {
-      api.get('/').then(res =>{
-        let rooms = this.formatData(res.data);
-        // console.log(items)
-        let featuredRooms = rooms.filter(room => room.featured === true);
-        let maxPrice = Math.max(...rooms.map(item => item.price));
-        let maxSize = Math.max(...rooms.map(item => item.size));
-
-        this.setState({
-            rooms: rooms,
-            featuredRooms: featuredRooms,
-            sortedRooms: rooms,
-            loading: false,
-            price: maxPrice,
-            maxPrice: maxPrice,
-            maxSize: maxSize
-
-        });
-      })
+      this.getServerSideProps()
 
   }
         
