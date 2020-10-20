@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-
+import axios from "axios"
 
 
 const RoomContext = React.createContext();
+
+const api = axios.create({
+  baseURL: `http://46.101.153.50:8000/api/hotels/`
+})
+
 class RoomProvider extends Component {
     state = {
         rooms: [],
@@ -22,10 +27,8 @@ class RoomProvider extends Component {
     };
 
     componentDidMount() {
-      fetch("http://46.101.153.50:8000/api/hotels/")
-      .then(res => res.json())
-      .then(items =>{
-        let rooms = this.formatData(items);
+      api.get('/').then(res =>{
+        let rooms = this.formatData(res.data);
         // console.log(items)
         let featuredRooms = rooms.filter(room => room.featured === true);
         let maxPrice = Math.max(...rooms.map(item => item.price));
@@ -42,7 +45,7 @@ class RoomProvider extends Component {
 
         });
       })
-  
+
   }
         
          
