@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import StyledHero from "../components/StyledHero";
 import Title from "../components/Title";
+import SubmitButton from "../components/SubmitButton";
 
 export default class SingleRoom extends Component {
   constructor(props) {
@@ -13,13 +14,47 @@ export default class SingleRoom extends Component {
     // console.log(this.props);
     this.state = {
       slug: this.props.match.params.slug,
-      defaultBcg
+      defaultBcg,
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    
   }
+  
   static contextType = RoomContext;
+  
+  handleSubmit(event){
+    event.preventDefault();
+
+    let fav = {
+      user_email: event.target.user_email.value,
+      name: event.target.name.value,
+      description: event.target.description.value,
+      capacity: event.target.capacity.value,
+      size: event.target.size.value,
+      price: event.target.price.value,
+      extras: event.target.extras.value,
+      breakfast: event.target.breakfast.value,
+      pets: event.target.pets.value,
+      images: event.target.images.value,
+      hotelName: event.target.hotelName.value,
+      published_at: event.target.published_at.value
+    };
+    fetch('http://localhost:8000/api/hotels/fav',{
+      method: "POST",
+      headers: {'Content-type':'application/json'},
+      body: JSON.stringify(fav)
+    }).then(response => response.json()).then(res => {
+      if (res){
+        console.log('addddddddddddddddddddddddddddd')
+      }
+    })
+  };
+
+  handleChange(event) {
+    event.preventDefault();
+  }
   // componentDidMount() {}
   render() {
-    console.log(this.context);
 
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
@@ -48,6 +83,8 @@ export default class SingleRoom extends Component {
     } = room;
 
     const [mainImg, ...defaultImg] = images;
+    // console.log(mainImg)
+    // const { user } = useAuth0();
 
     return (
       <>
@@ -78,6 +115,20 @@ export default class SingleRoom extends Component {
               <h6>published at : {published_at}</h6>
               <h6>price : ${price}</h6>
               <h6>size : {size} m<sup>2</sup></h6>
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" name='name' value={name}/>
+                <input type="text" name='description' value={description}/>
+                <input type="text" name='capacity' value={capacity}/>
+                <input type="text" name='size' value={size}/>
+                <input type="text" name='price' value={price}/>
+                <input type="text" name='extras' value={extras}/>
+                <input type="text" name='breakfast' value={breakfast}/>
+                <input type="text" name='pets' value={pets}/>
+                <input type="text" name='images' value={images}/>
+                <input type="text" name='hotelName' value={hotelName}/>
+                <input type="text" name='published_at' value={published_at}/>
+                <SubmitButton />
+              </form>
               <h6>
                 max capacity :{" "}
                 {capacity > 1 ? `${capacity} people` : `${capacity} person `}
