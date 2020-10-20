@@ -5,13 +5,22 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { RoomProvider } from "./context";
+import { Auth0Provider } from "@auth0/auth0-react"
+
+// const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+// const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
 ReactDOM.render(
-  <RoomProvider>
-    <Router>
-      <App />
-    </Router>
-  </RoomProvider>,
+  <Auth0Provider
+    domain='dev-ay7qvf1c.eu.auth0.com'
+    clientId='stgCBHTh0EDbxQLijvxp18Tl9l66N5e2'
+    redirectUri={window.location.origin}>
+    <RoomProvider>
+      <Router>
+        <App />
+      </Router>
+    </RoomProvider>
+  </Auth0Provider>,
   document.getElementById('root')
 );
 
