@@ -26,7 +26,7 @@ class RoomProvider extends Component {
       .then(res => res.json())
       .then(items =>{
         let rooms = this.formatData(items);
-        console.log(items)
+        // console.log(items)
         let featuredRooms = rooms.filter(room => room.featured === true);
         let maxPrice = Math.max(...rooms.map(item => item.price));
         let maxSize = Math.max(...rooms.map(item => item.size));
