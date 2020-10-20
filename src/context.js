@@ -29,7 +29,7 @@ class RoomProvider extends Component {
     async getServerSideProps(){
       // Call api here
       // Add data to props
-      const res = await fetch('http://46.101.153.50:8000/api/hotels/');
+      const res = await fetch('https://46.101.153.50:8000/api/hotels/');
       const dataObj = await res.json();
       let rooms = this.formatData(dataObj);
       // console.log(items)
