@@ -3,6 +3,11 @@ import logo from "../images/logo.png";
 import { FaAlignRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+import Profile from "./Profile";
+import FavoriteLink from "./FavoriteLink";
+
 export default class Navbar extends Component {
   state = {
     isOpen: false
@@ -30,11 +35,19 @@ export default class Navbar extends Component {
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
           >
             <li>
+            <LoginButton />
+            <LogoutButton />
+            </li>
+            <li>
+              <Profile />
+            </li>
+            <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/rooms">Rooms</Link>
             </li>
+              <FavoriteLink />
           </ul>
         </div>
       </nav>
