@@ -632,6 +632,10 @@ h6 {
 
 }
 
+.btn-primary-about:hover{
+  color: rgb(0, 0, 255);
+}
+
 .room-link-1{
 
   transform: scale(0);
