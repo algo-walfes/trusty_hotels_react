@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
-import FavoriteContainer from "../components/FavoriteContainer";
+// import FavoriteContainer from "../components/FavoriteContainer";
 
 const Favorite = () => {
   return (
@@ -14,7 +14,7 @@ const Favorite = () => {
           </Link>
         </Banner>
       </Hero>
-      <FavoriteContainer />
+      {/* <FavoriteContainer /> */}
     </>
   );
 };

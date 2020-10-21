@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Fjalla+One&family=Fredoka+One&family=Yanone+Kaffeesatz&family=ZCOOL+QingKe+HuangYou&display=swap');
-
+​
 /* 
 font-family: 'Acme', sans-serif;
 font-family: 'Fjalla One', sans-serif;
@@ -7,7 +7,7 @@ font-family: 'Fredoka One', cursive;
 font-family: 'Yanone Kaffeesatz', sans-serif;
 font-family: 'ZCOOL QingKe HuangYou', cursive;
 */
-
+​
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +62,7 @@ h6 {
   font-weight: bold;
   margin-bottom: 1.5em;
 }
-
+​
 .btn-primary {
   display: inline-block;
   text-decoration: none;
@@ -127,7 +127,7 @@ h6 {
   transition: var(--mainTransition);
   list-style-type: none;
   margin: 1% 0 0 0;
-
+​
 }
 .nav-links a {
   display: block;
@@ -143,17 +143,17 @@ h6 {
 .nav-links a:hover {
   color: var(--primaryColor);
 }
-
+​
 .show-nav {
   height: 100px;
 }
-
+​
 .nav-logo{
   width: 50% ;
   height: 80%;
   margin-top: 1%;
 }
-
+​
 @media screen and (min-width: 768px) {
   .nav-btn {
     display: none;
@@ -246,7 +246,7 @@ h6 {
   background: var(--primaryColor);
 }
 /* end of Title */
-
+​
 /* services */
 .services {
   padding: 5rem 0;
@@ -282,7 +282,7 @@ h6 {
     max-width: 1170px;
   }
 }
-
+​
 @media screen and (min-width: 1200px) {
   .services p {
     width: 100%;
@@ -290,7 +290,7 @@ h6 {
 }
 /*end of services */
 /* featured rooms */
-
+​
 .featured-rooms {
   padding: 5rem 0;
 }
@@ -323,7 +323,7 @@ h6 {
 .room:hover {
   box-shadow: var(--darkShadow);
 }
-
+​
 .img-container {
   position: relative;
 }
@@ -380,7 +380,7 @@ h6 {
 }
 /* end of room  */
 /* single room*/
-
+​
 .single-room {
   padding: 5rem 0 0 0;
 }
@@ -419,7 +419,7 @@ h6 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
-
+​
 .info h6 {
   font-weight: 300;
 }
@@ -467,7 +467,7 @@ h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 30px;
 }
-
+​
 @media screen and (min-width: 776px) {
   .roomslist-center {
     width: 90vw;
@@ -533,33 +533,33 @@ h6 {
   }
 }
 /* end of rooms fitler*/
-
+​
 /* start the footer */
-
+​
 /* .footer{
   display: flex;
   background-color: #ececec;
 }
-
+​
 .footer-logo{
   width: 10%;
   
 } */
-
+​
 /* end of the footer */
-
+​
 /* addetional */
-
+​
 .single-room-title{
   margin: 5% 0 0 0;
   
 }
-
+​
 /* end addetional */
-
-
+​
+​
 /*  test footer*/
-
+​
 .footer {
   /* position: fixed;
   top: 0;
@@ -573,17 +573,17 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
-
+​
 .fot-logo{
   width: 10% ;
   height: 15%;
   margin-top: 1%;
 }
-
+​
 .social-footer{
   margin:10px 0 0 0;
 }
-
+​
 .social-footer ul li{
   list-style-type: none;
   font-size: 120%;
@@ -598,7 +598,7 @@ h6 {
   /* font-family: 'Yanone Kaffeesatz', sans-serif; */
   /* font-family: 'ZCOOL QingKe HuangYou', cursive; */
 }
-
+​
 @media screen and (min-width: 768px) {
   .fot-logo{
     width: 20% ;
@@ -606,20 +606,20 @@ h6 {
     margin-top: 1%;
   }
 }
-
+​
 /* about start */
-
+​
 .aboutlist-center{
   margin-top: 8%;
   margin-bottom: 10%;
-
+​
   /* padding-right: 10%; */
 }
-
+​
 .about-icons{
   display: flex;
 }
-
+​
 .btn-primary-about{
   display: inline-block;
     text-decoration: none;
@@ -628,53 +628,111 @@ h6 {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 55px;
-
-
+​
+​
 }
-
+​
 .btn-primary-about:hover{
   color: rgb(0, 0, 255);
 }
-
+​
 .room-link-1{
-
+​
   transform: scale(0);
   transition: all 0.3s linear;
 }
-
+​
 .img-container:hover .room-link-1 {
   transform: translate(-50%, -50%) scale(1);
 }
-
+​
 .about-icon-position-1{
   position: absolute;
   top: 50%;
   left: 20%;
 }
-
+​
 .about-icon-position-2{
   position: absolute;
   top: 50%;
   left: 40%;
 }
-
+​
 .about-icon-position-3{
   position: absolute;
   top: 50%;
   left: 60%;
 }
-
+​
 .about-icon-position-4{
   position: absolute;
   top: 50%;
   left: 80%;
-
+​
 }
-
+​
 .about-title{
   margin-top: 5%;
 }
-
+​
 .about-img{
   height: 330px !important;
+}
+.log-button {
+  /* background-color: #4CAF50; */
+  border: 3px solid var(--mainBlack) ;
+  color: var(--mainBlack);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  top: 24% ;
+  left: 85%;
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+​
+.log-button:hover{
+  color: rgb(250, 167, 167);
+  border: 3px solid  rgb(250, 167, 167) ;
+}
+​
+.profile-nav{
+  display: block;
+  text-decoration: none;
+  /* padding: 1rem 0; */
+  color: var(--mainBlack);
+  /* transition: var(--mainTransition); */
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+  position: absolute;
+  top: 39%;
+  left: 72%;
+}
+​
+.hidden{
+  display: none;
+}
+​
+.add-fav-bt{
+  background-color: gray; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+​
+.add-fav-bt:hover{
+  background-color: rgb(250, 167, 167);
 }
