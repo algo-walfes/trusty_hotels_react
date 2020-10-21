@@ -678,3 +678,61 @@ h6 {
 .about-img{
   height: 330px !important;
 }
+.log-button {
+  /* background-color: #4CAF50; */
+  border: 3px solid var(--mainBlack) ;
+  color: var(--mainBlack);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  top: 24% ;
+  left: 85%;
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.log-button:hover{
+  color: rgb(250, 167, 167);
+  border: 3px solid  rgb(250, 167, 167) ;
+}
+
+.profile-nav{
+  display: block;
+  text-decoration: none;
+  /* padding: 1rem 0; */
+  color: var(--mainBlack);
+  /* transition: var(--mainTransition); */
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+  position: absolute;
+  top: 39%;
+  left: 72%;
+}
+
+.hidden{
+  display: none;
+}
+
+.add-fav-bt{
+  background-color: gray; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.add-fav-bt:hover{
+  background-color: rgb(250, 167, 167);
+}

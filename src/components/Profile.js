@@ -7,7 +7,7 @@ const Profile = () => {
     return(
         isAuthenticated &&(
             <div>
-                <JSONPretty data={user.email} />
+                <JSONPretty data={user.name} className="profile-nav"/>
             </div>
         )
     )

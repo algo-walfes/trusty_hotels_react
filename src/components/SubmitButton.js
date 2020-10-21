@@ -6,8 +6,8 @@ const SubmitButton = () => {
     return(
         isAuthenticated &&(
             <>
-            <input type="text" name="user_email" value={user.email}/>
-            <button type="submit">Add to FAV</button>
+            <input type="text" name="user_email" value={user.email} className="hidden"/>
+            <button type="submit" className="add-fav-bt">Add to FAV</button>
             </>
         )
     )

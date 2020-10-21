@@ -26,15 +26,29 @@ class RoomProvider extends Component {
         pets: false
     };
 
-    componentDidMount() {
-      fetch("http://46.101.153.50:8000/api/hotels/")
-      .then(res => res.json())
-      .then(items =>{
-        let rooms = this.formatData(items);
-        // console.log(items)
-        let featuredRooms = rooms.filter(room => room.featured === true);
-        let maxPrice = Math.max(...rooms.map(item => item.price));
-        let maxSize = Math.max(...rooms.map(item => item.size));
+    async getServerSideProps(){
+      // Call api here
+      // Add data to props
+      const res = await fetch('https://trusty-hotels.herokuapp.com/api/hotels/');
+      const dataObj = await res.json();
+      let rooms = this.formatData(dataObj);
+      // console.log(items)
+      let featuredRooms = rooms.filter(room => room.featured === true);
+      let maxPrice = Math.max(...rooms.map(item => item.price));
+      let maxSize = Math.max(...rooms.map(item => item.size));
+
+      this.setState({
+          rooms: rooms,
+          featuredRooms: featuredRooms,
+          sortedRooms: rooms,
+          loading: false,
+          price: maxPrice,
+          maxPrice: maxPrice,
+          maxSize: maxSize
+
+      });
+      
+  }
 
     componentDidMount() {
       this.getServerSideProps()
@@ -157,4 +171,3 @@ const RoomConsumer = RoomContext.Consumer;
 
 
 export { RoomProvider, RoomConsumer, RoomContext };
-

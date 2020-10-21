@@ -4,7 +4,7 @@ import defaultImg from "../images/room-1.jpeg";
 // import PropTypes from "prop-types";
 export default function Room({ room }) {
   // console.log(room);
-  const { name, slug, images, price,hotelName } = room;
+  const { name, slug, images, price,hotelName,user_email} = room;
 
   return (
     <article className="room">
@@ -20,6 +20,7 @@ export default function Room({ room }) {
       </div>
       <p className="room-info">{hotelName}</p>
       <p className="room-info">{name}</p>
+      
     </article>
   );
 }
