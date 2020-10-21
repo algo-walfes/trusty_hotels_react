@@ -6,9 +6,11 @@ const CommentSubmit = () => {
     return(
         isAuthenticated &&(
             <>
-            <input type="text" name="useremail" value={user.email}/>
-            <input type="text" name="comment" />
-            <button type="submit">Add My Comment</button>
+            <div className="add-new-com">
+            <input type="text" name="useremail" value={user.email} className="hidden"/>
+            <input type="text" name="comment" className="comment-text-field" />
+            <button type="submit" className="comment-button">Add Comment</button>
+            </div>
             </>
         )
     )
