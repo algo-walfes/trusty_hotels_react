@@ -126,7 +126,7 @@ h6 {
   overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
-  margin: 1% 0 0 0;
+  margin-left: 63px !important;
 
 }
 .nav-links a {
@@ -152,6 +152,8 @@ h6 {
   width: 50% ;
   height: 80%;
   margin-top: 1%;
+  margin-left: 21%;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -681,24 +683,26 @@ h6 {
 .log-button {
   /* background-color: #4CAF50; */
   border: 3px solid var(--mainBlack) ;
-  color: var(--mainBlack);
-  padding: 15px 32px;
+  border-radius: 15px;
+  color: white;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
-  top: 24% ;
+  top: 28% ;
   left: 85%;
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  background-color: black;
 }
 
 .log-button:hover{
-  color: rgb(250, 167, 167);
+  background-color: rgb(250, 167, 167);
   border: 3px solid  rgb(250, 167, 167) ;
 }
 
@@ -706,15 +710,18 @@ h6 {
   display: block;
   text-decoration: none;
   /* padding: 1rem 0; */
-  color: var(--mainBlack);
+  color: white;
   /* transition: var(--mainTransition); */
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: var(--mainSpacing);
+  /* letter-spacing: var(--mainSpacing); */
   position: absolute;
-  top: 39%;
-  left: 72%;
+  top: 32%;
+  left: 6.5%;
+  background-color: rgb(92, 92, 92);
+  padding: 6px;
+  border-radius: 15px;
 }
 
 .hidden{
@@ -722,17 +729,26 @@ h6 {
 }
 
 .add-fav-bt{
-  background-color: gray; /* Green */
+  background-color:rgb(94, 197, 94);
   color: white;
-  padding: 15px 32px;
+  padding: 9px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
   border-radius: 15px;
+  font-weight: 600;
 }
 
 .add-fav-bt:hover{
   background-color: rgb(250, 167, 167);
+}
+
+.profile-pic{
+  position: absolute;
+  top: 11%;
+  left: 1%;
+  border-radius: 100%;
+  width: 5%;
 }
