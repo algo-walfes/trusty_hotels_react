@@ -7,6 +7,7 @@ import { RoomContext } from "../context";
 import StyledHero from "../components/StyledHero";
 import Title from "../components/Title";
 import SubmitButton from "../components/SubmitButton";
+import CommentSubmit from "../components/CommentSubmit";
 
 export default class SingleRoom extends Component {
   constructor(props) {
@@ -15,8 +16,12 @@ export default class SingleRoom extends Component {
     this.state = {
       slug: this.props.match.params.slug,
       defaultBcg,
+      useremail: '',
+      comment: '',
+      puplisehd_at: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit2 = this.handleSubmit2.bind(this);
     
   }
   
@@ -52,6 +57,29 @@ export default class SingleRoom extends Component {
     })
   };
 
+  handleSubmit2(event){
+    event.preventDefault();
+    let comment = {
+      post: event.target.post.value,
+      comment: event.target.comment.value,
+      useremail: event.target.useremail.value,
+    }
+    fetch('https://trusty-hotels.herokuapp.com/api/hotels/comments',{
+      method: "POST",
+      headers: {'Content-type':'application/json'},
+      body: JSON.stringify(comment)
+    }).then(response => response.json()).then(res => {
+      if (res){
+        console.log('adddd CommenttTttTTttTt')
+      }
+    });
+    this.setState({
+      useremail: event.target.useremail.value,
+      comment: event.target.comment.value,
+      puplisehd_at: '10/21/2020'
+    })
+  }
+
   handleChange(event) {
     event.preventDefault();
   }
@@ -70,7 +98,9 @@ export default class SingleRoom extends Component {
         </div>
       );
     }
+    console.log(room.id);
     const {
+      id,
       name,
       description,
       capacity,
@@ -82,6 +112,7 @@ export default class SingleRoom extends Component {
       images,
       hotelName,
       published_at,
+      commentModels,
     } = room;
     // console.log(room);
     const [mainImg, ...defaultImg] = images;
@@ -150,6 +181,22 @@ export default class SingleRoom extends Component {
               return <li key={index}>- {item}</li>;
             })}
           </ul>
+        </section>
+        <section className="room-comments">
+          <h6>Comments</h6>
+          <ul className="comments">
+            {commentModels.map(item => {
+              return <li>{item.useremail}<br/>{item.comment}<br/>{item.puplisehd_at}<br/><br/></li>;
+            })}
+            <li>{this.state.useremail}<br/>{this.state.comment}<br/>{this.state.puplisehd_at}<br/><br/></li>
+          </ul>
+          <br/>
+          <br/>
+          <h6>Add your comment:</h6>
+          <form onSubmit={this.handleSubmit2}>
+            <input type="text" name="post" value={id}/>
+            <CommentSubmit />
+          </form>
         </section>
       </>
     );

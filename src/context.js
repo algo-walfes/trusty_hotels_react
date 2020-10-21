@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-// import axios from "axios"
+
 
 
 const RoomContext = React.createContext();
-
-// const api = axios.create({
-//   baseURL: `http://46.101.153.50:8000/api/hotels/`
-// })
-
 class RoomProvider extends Component {
     state = {
         rooms: [],
@@ -48,19 +43,17 @@ class RoomProvider extends Component {
 
       });
       
-  }
+  }     
+      
+  componentDidMount() {
+    this.getServerSideProps()
 
-    componentDidMount() {
-      this.getServerSideProps()
-
-  }
-        
-         
-     
+}
 
     formatData(items) {
-        let tempItems = items.map(item => {
-          let id = item.id;
+      let tempItems = items.map((item, i) => {
+          // console.log(item)
+          let id = i+1;
           let hotelName = item.hotel_name;
           let name = item.name;
           let slug = item.slug;
@@ -74,11 +67,12 @@ class RoomProvider extends Component {
           let description = item.description;
           let extras = item.extras.split(",,");
           let published_at = item.published_at.split("T")[0];
-          
+          let commentModels = item.commentModels;
           
           let images = [item.main_image,item.image1,item.image2,item.image3];
     
-          let room = {published_at,hotelName,name,slug,type,price,size,capacity,pets,breakfast,featured,description,extras, images, id };
+          let room = {commentModels,published_at,hotelName,name,slug,type,price,size,capacity,pets,breakfast,featured,description,extras, images, id };
+          // console.log(room.commentModels);
           return room;
         });
         // console.log(tempItems)
