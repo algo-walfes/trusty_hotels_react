@@ -25,6 +25,7 @@ function App() {
         <Route exact path="/about" component={About} />
 
         <Route exact path="/favorite" component={Favorite} />
+        
         <Route component={Error} />
       </Switch>
       <Footer/>

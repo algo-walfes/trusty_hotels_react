@@ -3,8 +3,11 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import FavoriteContainer from "../components/FavoriteContainer";
+import { useAuth0 } from '@auth0/auth0-react';
+
 
 const Favorite = () => {
+  const { user, isAuthenticated } = useAuth0();
   return (
     <>
       <Hero hero="roomsHero">
@@ -14,7 +17,7 @@ const Favorite = () => {
           </Link>
         </Banner>
       </Hero>
-      <FavoriteContainer />
+      <FavoriteContainer user={user} />
     </>
   );
 };

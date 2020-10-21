@@ -21,6 +21,7 @@ export default class SingleRoom extends Component {
   }
   
   static contextType = RoomContext;
+
   
   handleSubmit(event){
     event.preventDefault();
@@ -37,9 +38,10 @@ export default class SingleRoom extends Component {
       pets: event.target.pets.value,
       images: event.target.images.value,
       hotelName: event.target.hotelName.value,
-      published_at: event.target.published_at.value
+      published_at: event.target.published_at.value,
+      slug: this.state.slug
     };
-    fetch('http://localhost:8000/api/hotels/fav',{
+    fetch('https://trusty-hotels.herokuapp.com/api/hotels/fav',{
       method: "POST",
       headers: {'Content-type':'application/json'},
       body: JSON.stringify(fav)
@@ -81,10 +83,11 @@ export default class SingleRoom extends Component {
       hotelName,
       published_at,
     } = room;
-
+    // console.log(room);
     const [mainImg, ...defaultImg] = images;
     // console.log(mainImg)
     // const { user } = useAuth0();
+
 
     return (
       <>
@@ -100,6 +103,7 @@ export default class SingleRoom extends Component {
         </h4>
         <section className="single-room">
           <div className="single-room-images">
+
             {defaultImg.map((item, index) => {
               return <img key={index} src={item} alt={name} />;
             })}
@@ -115,26 +119,27 @@ export default class SingleRoom extends Component {
               <h6>published at : {published_at}</h6>
               <h6>price : ${price}</h6>
               <h6>size : {size} m<sup>2</sup></h6>
-              <form onSubmit={this.handleSubmit}>
-                <input type="text" name='name' value={name}/>
-                <input type="text" name='description' value={description}/>
-                <input type="text" name='capacity' value={capacity}/>
-                <input type="text" name='size' value={size}/>
-                <input type="text" name='price' value={price}/>
-                <input type="text" name='extras' value={extras}/>
-                <input type="text" name='breakfast' value={breakfast}/>
-                <input type="text" name='pets' value={pets}/>
-                <input type="text" name='images' value={images}/>
-                <input type="text" name='hotelName' value={hotelName}/>
-                <input type="text" name='published_at' value={published_at}/>
-                <SubmitButton />
-              </form>
+
               <h6>
                 max capacity :{" "}
                 {capacity > 1 ? `${capacity} people` : `${capacity} person `}
               </h6>
               <h6>{pets ? "pets allowed" : "no pets allowed"}</h6>
               <h6>{breakfast && "free breakfast included"}</h6>
+              <form onSubmit={this.handleSubmit} className="fav-form">
+                <input type="text" name='name' value={name} className="hidden"/>
+                <input type="text" name='description' value={description} className="hidden"/>
+                <input type="text" name='capacity' value={capacity} className="hidden"/>
+                <input type="text" name='size' value={size} className="hidden"/>
+                <input type="text" name='price' value={price} className="hidden"/>
+                <input type="text" name='extras' value={extras} className="hidden"/>
+                <input type="text" name='breakfast' value={breakfast} className="hidden"/>
+                <input type="text" name='pets' value={pets} className="hidden"/>
+                <input type="text" name='images' value={images} className="hidden"/>
+                <input type="text" name='hotelName' value={hotelName} className="hidden"/>
+                <input type="text" name='published_at' value={published_at} className="hidden"/>
+                <SubmitButton />
+              </form>
             </article>
           </div>
         </section>
