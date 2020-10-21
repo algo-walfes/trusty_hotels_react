@@ -751,3 +751,115 @@ h6 {
   border-radius: 100%;
   width: 5%;
 }
+
+.room-comments{
+  margin: 0 0 0 11%;
+  border: 1px solid black;
+  width: 50%;
+  /* padding-bottom: 7%; */
+  background-color: gray;
+  border-radius: 50px;
+
+}
+
+.room-comments ul{
+  list-style-type: none;
+
+}
+
+.add-comment{
+  display: flex;
+  margin-top: 5%;
+}
+
+.empty-space{
+  padding: 5%;
+}
+
+.emp-comm{
+  display: none;
+}
+
+.room-comments ul li{
+  padding: 14px;
+  list-style-type: none;
+  background-color: rgb(212, 212, 212);
+  width: 40%;
+  border-radius: 27px;
+  margin: 4%;
+  /* border: 1px solid  rgb(212, 212, 212); */
+  
+  box-shadow: 5px 10px 8px black;
+
+}
+
+
+
+.comment-box{
+  margin-top: 20px;
+  /* background-color: white; */
+}
+
+.comm-email{
+  font-size: 17px;
+  font-weight: 900;
+  
+}
+
+
+.comm-title{
+  color: white;
+  background-color: black;
+  font-size: 25px;
+  font-weight: 900;
+  margin: 23px 0 0 30px;
+  width: 21%;
+  padding: 6px;
+  border-radius: 15px;
+
+}
+
+.add-new-com{
+  margin-left: 20px;
+}
+
+.add-new-com button{
+  margin-left: 10px ;
+}
+
+.comment-button{
+  border: 3px solid var(--mainBlack) ;
+  border-radius: 15px;
+  color: white;
+  padding: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: black;
+}
+
+.comment-button:hover{
+ background-color: rgb(250, 167, 167) ;
+ border: 3px solid  rgb(250, 167, 167) ;
+ border-radius: 15px;
+  
+}
+
+.add-comm-text{
+  margin-left: 3%;
+}
+
+.comment-text-field{
+padding: 5px;
+border: 3px solid black;
+border-radius: 10px;
+font-weight: 600;
+
+}

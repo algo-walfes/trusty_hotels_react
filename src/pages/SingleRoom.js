@@ -85,6 +85,13 @@ export default class SingleRoom extends Component {
   }
   // componentDidMount() {}
   render() {
+    var stateLi = ""
+    if(this.state.comment == ''){
+      stateLi = "emp-comm"
+    }
+    else{
+      stateLi = "hellooo"
+    }
 
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
@@ -183,21 +190,33 @@ export default class SingleRoom extends Component {
           </ul>
         </section>
         <section className="room-comments">
-          <h6>Comments</h6>
+          
+          <h6 className="comm-title">Comments</h6>
           <ul className="comments">
             {commentModels.map(item => {
-              return <li>{item.useremail}<br/>{item.comment}<br/>{item.puplisehd_at}<br/><br/></li>;
+              return <li>
+                <p className="comm-email">{item.useremail}</p>
+                <p className="comment-box">{item.comment}</p>
+                    </li>
             })}
-            <li>{this.state.useremail}<br/>{this.state.comment}<br/>{this.state.puplisehd_at}<br/><br/></li>
+                <li className={stateLi}>
+                  <p className="comm-email">{this.state.useremail}</p>
+                  <p className="comment-box">{this.state.comment}</p>
+                </li>
+            
+           
           </ul>
-          <br/>
-          <br/>
-          <h6>Add your comment:</h6>
+
+          <div className="add-comment">
+          <h6 className="add-comm-text" >Add your comment:</h6>
           <form onSubmit={this.handleSubmit2}>
-            <input type="text" name="post" value={id}/>
+            <input type="text" name="post" value={id} className="hidden"/>
             <CommentSubmit />
           </form>
+          </div>
+          
         </section>
+        <div className="empty-space"></div>
       </>
     );
   }
