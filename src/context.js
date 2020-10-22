@@ -26,8 +26,8 @@ class RoomProvider extends Component {
       // Add data to props
       const res = await fetch('https://trusty-hotels.herokuapp.com/api/hotels/');
       const dataObj = await res.json();
+      // console.log(dataObj)
       let rooms = this.formatData(dataObj);
-      // console.log(items)
       let featuredRooms = rooms.filter(room => room.featured === true);
       let maxPrice = Math.max(...rooms.map(item => item.price));
       let maxSize = Math.max(...rooms.map(item => item.size));
@@ -52,8 +52,8 @@ class RoomProvider extends Component {
 
     formatData(items) {
       let tempItems = items.map((item, i) => {
-          // console.log(item)
-          let id = i+1;
+          // console.log(item.commentModels[0].post)
+          let id = item.commentModels[0].post;
           let hotelName = item.hotel_name;
           let name = item.name;
           let slug = item.slug;

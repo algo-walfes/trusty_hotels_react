@@ -4,11 +4,11 @@ import JSONPretty from 'react-json-pretty';
 
 const Profile = () => {
     const { user, isAuthenticated } = useAuth0();
-    console.log(user)
+    // console.log(user)
     return(
         isAuthenticated &&(
             <div>
-                <img src={user.picture} className="profile-pic"></img>
+                <img src={user.picture} className="profile-pic" alt={user.name}></img>
                 <JSONPretty data={user.name} className="profile-nav"/>
             </div>
         )
