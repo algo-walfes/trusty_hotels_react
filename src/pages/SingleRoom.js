@@ -70,7 +70,7 @@ export default class SingleRoom extends Component {
       body: JSON.stringify(comment)
     }).then(response => response.json()).then(res => {
       if (res){
-        console.log('adddd CommenttTttTTttTt')
+        console.log('adddd CommenttTttTTttTt', res)
       }
     });
     this.setState({
@@ -86,7 +86,7 @@ export default class SingleRoom extends Component {
   // componentDidMount() {}
   render() {
     var stateLi = ""
-    if(this.state.comment == ''){
+    if(this.state.comment === ''){
       stateLi = "emp-comm"
     }
     else{
